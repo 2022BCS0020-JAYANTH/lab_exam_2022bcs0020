@@ -25,16 +25,14 @@ jobs:
 
       - name: Train model
         run: |
-          python scripts/train.py
+          python train.py
 
       - name: Generate Metrics
         run: |
           echo "### Model Metrics" >> $GITHUB_STEP_SUMMARY
           echo "K. Jayanth 2022BCS0020" >> $GITHUB_STEP_SUMMARY
           echo "batch1_2022BCS0020" >> $GITHUB_STEP_SUMMARY
-          echo "\`\`\`json" >> $GITHUB_STEP_SUMMARY
           cat results/metrics.json >> $GITHUB_STEP_SUMMARY
-          echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
 
   deploy:
     needs: train
