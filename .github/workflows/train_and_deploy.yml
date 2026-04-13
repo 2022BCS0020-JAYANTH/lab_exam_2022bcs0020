@@ -48,8 +48,8 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/batch1_2022BCS0020:latest .
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/batch1_2022bcs0020:latest .
 
       - name: Push Docker image
         run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/batch1_2022BCS0020:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/batch1_2022bcs0020:latest
